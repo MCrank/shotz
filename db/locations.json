@@ -1,0 +1,11 @@
+{
+  "locations": [
+    {
+      "id": "#",
+      "name": "In A World...",
+      "img": "action",
+      "address": "<date>",
+      "shootTime": "Morning, Afternoon, Evening, After Dark"
+    }
+  ]
+}

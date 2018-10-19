@@ -1,0 +1,11 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "name": "In A World...",
+      "genre": "action",
+      "releaseDate": "<date>",
+      "description": "Movie Description"
+    }
+  ]
+}
