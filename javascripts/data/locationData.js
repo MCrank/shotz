@@ -1,4 +1,5 @@
 import { displayLocations } from '../components/locationComponent.js';
+
 const getLocationData = () => {
   $.get('../db/locations.json')
     .done(locationData => {
