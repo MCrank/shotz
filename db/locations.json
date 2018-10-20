@@ -1,11 +1,39 @@
 {
   "locations": [
     {
-      "id": "#",
-      "name": "In A World...",
-      "img": "action",
-      "address": "<date>",
-      "shootTime": "Morning, Afternoon, Evening, After Dark"
+      "id": "1",
+      "name": "Eilean Donan Castle",
+      "img": "./img/Eilean-Donan.jpg",
+      "address": "Kyle of Lochalsh IV40 8DX, Scotland",
+      "shootTime": "Morning"
+    },
+    {
+      "id": "2",
+      "name": "Highgate Cemetary",
+      "img": "./img/Highgate-Cemetery.jpg",
+      "address": "Swain’s Lane, London N6 6PJ",
+      "shootTime": "After Dark"
+    },
+    {
+      "id": "3",
+      "name": "Doñana National Park",
+      "img": "./img/Doñana-Woodlands.jpg",
+      "address": "Huelva, Seville and Cádiz provinces - Andalucía, Spain",
+      "shootTime": "Afternoon"
+    },
+    {
+      "id": "4",
+      "name": "Rhyolite Ghost Town",
+      "img": "./img/Rhyolite-NV.jpg",
+      "address": "Off Highway 374, Death Valley National Park, Beatty, NV 89003",
+      "shootTime": "Evening"
+    },
+    {
+      "id": "5",
+      "name": "Pigeon Point Lighthouse",
+      "img": "./img/Pigeon-Point.jpg",
+      "address": "210 Pigeon Point Rd, Pescadero, CA 94060",
+      "shootTime": "Evening"
     }
   ]
 }
