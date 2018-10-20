@@ -1,1 +1,5 @@
-console.log('Utils.js');
+const getCurrentTime = () => {
+  return moment().format();
+};
+
+export { getCurrentTime };
