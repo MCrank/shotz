@@ -32,10 +32,17 @@ const displayLocations = myLocations => {
   $("#location-cards").append(newString);
 };
 
+// This was a MOTHERFUCKER.  This made me not like JQuery at all mostly because this is teh first
+// time that I have done anythign complex with it.  Maybe it will get better, maybe not
 const userInputFilter = inputValue => {
-  $(".card-title").each(function() {
+  $(".loc-card").each(function() {
     if (
       $(this)
+        .find(".card-title em")
+        .not(":icontains('" + inputValue + "')")
+        .html() &&
+      $(this)
+        .find(".loc-adx")
         .not(":icontains('" + inputValue + "')")
         .html()
     ) {
@@ -49,53 +56,5 @@ const userInputFilter = inputValue => {
     }
   });
 };
-
-//   if ($("input")[0].value === "") {
-//     $(".card").show();
-//   } else if (
-//     $(".card-title").each((index, card) => {
-//       $(card).not(":icontains('" + inputValue + "')");
-//     })
-//   ) {
-//     $(".card-title")
-//       .closest(".loc-card")
-//       .hide();
-//   } else {
-//     $(".card-title").each((index, card) => {
-//       $($("card:icontains('" + inputValue + "')"))
-//         .closest(".loc-card")
-//         .show("#" + index);
-//     });
-//   }
-// };
-
-// const userInputFilter = inputValue => {
-//   if ($("input")[0].value === "") {
-//     $(".card").show();
-//   } else if (
-//     $(".card-title").each((index, card) => {
-//       console.log(index);
-//       $(card).not(":icontains('" + inputValue + "')");
-//     })
-//   ) {
-//     $(".card")[index].hide();
-//   } else if (
-//     $(".loc-adx").each((index, card) => {
-//       $(card).not(":icontains('" + inputValue + "')");
-//     })
-//   ) {
-//     $(".card")[index].hide();
-//   } else {
-//     $(".card")[index].show();
-//   }
-
-//else {
-//   $(".card").each((index, card) => {
-//     $(card)
-//       .not(":icontains('" + inputValue + "')")
-//       .hide();
-//   });
-// }
-// };
 
 export { displayLocations, userInputFilter };
