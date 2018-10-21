@@ -10,4 +10,17 @@ const getUniqueId = () => {
     .substr(2, 16);
 };
 
+// Create a case incensitive :contains because jquery doesn't have one for some damn reason
+// Found this in the internet and it seems to work
+$.expr[":"].icontains = $.expr.createPseudo(function(arg) {
+  return function(elem) {
+    return (
+      $(elem)
+        .text()
+        .toUpperCase()
+        .indexOf(arg.toUpperCase()) >= 0
+    );
+  };
+});
+
 export { getCurrentTime, getUniqueId };
