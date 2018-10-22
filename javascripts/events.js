@@ -1,4 +1,7 @@
-import { userInputFilter } from "./components/locationComponent.js";
+import {
+  userInputFilter,
+  userBtnFilter
+} from "./components/locationComponent.js";
 
 const inputEvents = () => {
   $("#filter-input").on("keyup", evt => {
@@ -6,4 +9,15 @@ const inputEvents = () => {
   });
 };
 
-export { inputEvents };
+const buttonEvents = () => {
+  $(".btn").on("click", evt => {
+    userBtnFilter(evt.target);
+  });
+};
+
+const addEvents = () => {
+  inputEvents();
+  buttonEvents();
+};
+
+export { addEvents };
