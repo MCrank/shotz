@@ -1,13 +1,3 @@
-const movieLocations = [];
-
-const setMovieLocation = locationsArray => {
-  movieLocations = locationsArray;
-};
-
-const getMovieLocations = () => {
-  return movieLocations;
-};
-
 const displayLocations = myLocations => {
   let newString = "";
   myLocations.forEach(location => {
@@ -22,7 +12,7 @@ const displayLocations = myLocations => {
             <p class="loc-adx card-text">${location.address}</p>
           </div>
           <div class="card-footer">
-            <p class="m-0">Shoot Time: <span class="badge badge-light">${
+            <p class="loc-time m-0">Shoot Time: <span class="badge badge-light">${
               location.shootTime
             }</span></p>
           </div>
@@ -32,8 +22,8 @@ const displayLocations = myLocations => {
   $("#location-cards").append(newString);
 };
 
-// This was a MOTHERFUCKER.  This made me not like JQuery at all mostly because this is teh first
-// time that I have done anythign complex with it.  Maybe it will get better, maybe not
+// This was a MOTHERFUCKER.  This made me not like JQuery at all mostly because this is the first
+// time that I have done anything complex with it.  Maybe it will get better, maybe not
 const userInputFilter = inputValue => {
   $(".loc-card").each(function() {
     if (
@@ -48,6 +38,29 @@ const userInputFilter = inputValue => {
     ) {
       $(this)
         .closest(".loc-card")
+        .fadeOut(1600);
+    } else {
+      $(this)
+        .closest(".loc-card")
+        .fadeIn(1600);
+    }
+  });
+};
+
+const userBtnFilter = evtTarget => {
+  if (evtTarget.innerHTML === "Show All") {
+    $(".loc-card").fadeIn(800);
+    return;
+  }
+  $(".loc-card").each(function() {
+    if (
+      $(this)
+        .find(".loc-time span")
+        .not(":icontains('" + evtTarget.innerHTML + "')")
+        .html()
+    ) {
+      $(this)
+        .closest(".loc-card")
         .hide();
     } else {
       $(this)
@@ -57,4 +70,4 @@ const userInputFilter = inputValue => {
   });
 };
 
-export { displayLocations, userInputFilter };
+export { displayLocations, userInputFilter, userBtnFilter };

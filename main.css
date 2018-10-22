@@ -1,3 +1,11 @@
 body {
   background-color: oldlace;
 }
+
+.btn-outline-dark,
+.btn-outline-dark:hover,
+.btn-outline-dark:active,
+.btn-outline-dark:visited {
+  background-color: orange !important;
+  font-weight: bold;
+}
