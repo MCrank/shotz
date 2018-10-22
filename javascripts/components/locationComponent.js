@@ -38,11 +38,11 @@ const userInputFilter = inputValue => {
     ) {
       $(this)
         .closest(".loc-card")
-        .fadeOut(1600);
+        .fadeOut(800);
     } else {
       $(this)
         .closest(".loc-card")
-        .fadeIn(1600);
+        .fadeIn(800);
     }
   });
 };
