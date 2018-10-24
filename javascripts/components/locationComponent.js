@@ -29,11 +29,11 @@ const userInputFilter = inputValue => {
     if (
       $(this)
         .find(".card-title em")
-        .not(":icontains('" + inputValue + "')")
+        .not(`:icontains(${inputValue})`)
         .html() &&
       $(this)
         .find(".loc-adx")
-        .not(":icontains('" + inputValue + "')")
+        .not(`:icontains(${inputValue})`)
         .html()
     ) {
       $(this)
@@ -56,7 +56,7 @@ const userBtnFilter = evtTarget => {
     if (
       $(this)
         .find(".loc-time span")
-        .not(":icontains('" + evtTarget.innerHTML + "')")
+        .not(`:icontains(${evtTarget.innerHTML})`)
         .html()
     ) {
       $(this)
