@@ -1,7 +1,9 @@
+import { getMoviesData } from "../data/movieData.js";
+
 const displayMovies = myMovies => {
-  let newString = '';
+  let newString = "";
   myMovies.forEach(movie => {
-    let releaseDate = moment(movie.releaseDate).format('MMMM Do YYYY');
+    let releaseDate = moment(movie.releaseDate).format("MMMM Do YYYY");
     newString = `
     <h1 class="display-4">${movie.name}</h1>
     <h3 class="text-capitalize"><strong>Genre: </strong>${movie.genre}</h3>
@@ -10,7 +12,17 @@ const displayMovies = myMovies => {
     <p>${movie.description}</p>
     `;
   });
-  $('#movie-tron').append(newString);
+  $("#movie-tron").append(newString);
 };
 
-export { displayMovies };
+const initMoviesCards = () => {
+  getMoviesData()
+    .then(movies => {
+      return displayMovies(movies);
+    })
+    .catch(error => {
+      console.error();
+    });
+};
+
+export { initMoviesCards };

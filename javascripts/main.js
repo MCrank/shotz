@@ -1,9 +1,9 @@
-import { getMovieData } from "./data/movieData.js";
 import { getLocationData } from "./data/locationData.js";
 import { addEvents } from "./events.js";
+import { initMoviesCards } from "./components/movieComponent.js";
 
 const initApp = () => {
-  getMovieData();
+  initMoviesCards();
   getLocationData();
   addEvents();
 };
