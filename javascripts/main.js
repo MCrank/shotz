@@ -1,10 +1,10 @@
-import { getLocationData } from "./data/locationData.js";
-import { addEvents } from "./events.js";
 import { initMoviesCards } from "./components/movieComponent.js";
+import { initLocationCards } from "./components/locationComponent.js";
+import { addEvents } from "./events.js";
 
 const initApp = () => {
   initMoviesCards();
-  getLocationData();
+  initLocationCards();
   addEvents();
 };
 

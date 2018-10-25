@@ -1,14 +1,13 @@
-import { displayLocations } from '../components/locationComponent.js';
-
 const getLocationData = () => {
-  $.get('../db/locations.json')
-    .done(locationData => {
-      //   console.log(locationData.locations);
-      displayLocations(locationData.locations);
-    })
-    .fail(error => {
-      console.log({ error });
-    });
+  return new Promise((resolve, reject) => {
+    $.get("../db/locations.json")
+      .done(locationData => {
+        resolve(locationData.locations);
+      })
+      .fail(error => {
+        reject(error);
+      });
+  });
 };
 
 export { getLocationData };
