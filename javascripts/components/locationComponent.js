@@ -1,3 +1,5 @@
+import { getLocationData } from "../data/locationData.js";
+
 const displayLocations = myLocations => {
   let newString = "";
   myLocations.forEach(location => {
@@ -70,4 +72,14 @@ const userBtnFilter = evtTarget => {
   });
 };
 
-export { displayLocations, userInputFilter, userBtnFilter };
+const initLocationCards = () => {
+  getLocationData()
+    .then(locations => {
+      displayLocations(locations);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+};
+
+export { initLocationCards, userInputFilter, userBtnFilter };

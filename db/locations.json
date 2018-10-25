@@ -33,7 +33,56 @@
       "name": "Pigeon Point Lighthouse",
       "img": "./img/Pigeon-Point.jpg",
       "address": "210 Pigeon Point Rd, Pescadero, CA 94060",
+      "shootTime": "After Dark"
+    },
+    {
+      "id": "6",
+      "name": "Diamond Head",
+      "img": "./img/Diamond-Head.jpg",
+      "address": "Diamond Head Rd, Honolulu, HI 96816 ",
+      "shootTime": "Afternoon"
+    },
+    {
+      "id": "7",
+      "name": "St Clement's Church, Rodel",
+      "img": "./img/Church-Rodel.jpg",
+      "address": "At Rodel, Harris on A859, Scotland",
+      "shootTime": "Morning"
+    },
+    {
+      "id": "8",
+      "name": "Wat Rong Khun",
+      "img": "./img/Wat-Rong-Khun.jpg",
+      "address": "Mueang Chiang Rai, Chiang Rai, Thailand",
       "shootTime": "Evening"
+    },
+    {
+      "id": "9",
+      "name": "Cappadocia Mountain Range",
+      "img": "./img/Gerome-Turkey.jpg",
+      "address": "Village of Gerome, Turkey",
+      "shootTime": "After Dark"
+    },
+    {
+      "id": "10",
+      "name": "Luxurious Gardens",
+      "img": "./img/Abu-Dhabi.jpg",
+      "address": "Abu-Dhabi, United Arab Emirates",
+      "shootTime": "Morning"
+    },
+    {
+      "id": "11",
+      "name": "Le Vieux-Moulin (Vernon)",
+      "img": "./img/Vernon-France.jpg",
+      "address": "Vernon, Normandy, France",
+      "shootTime": "Evening"
+    },
+    {
+      "id": "12",
+      "name": "Neuschwanstein Castle",
+      "img": "./img/German-Castle.jpg",
+      "address": "Neuschwanstein Street 20, 87645 Schwangau",
+      "shootTime": "Afternoon"
     }
   ]
 }
