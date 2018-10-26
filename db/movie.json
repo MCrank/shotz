@@ -5,24 +5,24 @@
       "name": "Really Scary Movie",
       "genre": "horror",
       "releaseDate": "2019-10-25T05:00:00.000Z",
-      "description": "Worms with guts ect. killer mental psychotic sliced. Eerie needles edginess, graveyard on death rotten, disturbing non grave. Death bruises moon torture demons devil or vampire werewolf wind. Buried no.  Guts claw and creature hair-raising decapitated at est. Graves slice ominous is guns exorcism guts. Occult at alley pushed. Mental hospital sliced drowning. Bloodcurdling motionless murder, disturbing ominous running at, murderer oozed corpse. Needles at bowels alarming. Stalking wind, drenched chilling sick mental, with mutilation zombies blood, or shaking with willow trees shriek. Disembowel stab, chain.",
-      "movielocations": [1, 2, 9, 4, 7]
+      "description": "Worms with guts ect. killer mental psychotic sliced. Eerie needles edginess, graveyard on death rotten, disturbing non grave. Death bruises moon torture demons devil or vampire werewolf wind. Buried no.  Guts claw and creature hair-raising decapitated at est. Graves slice ominous is guns exorcism guts. Occult at alley pushed. Mental hospital sliced drowning.",
+      "movieLocations": [1, 2, 9, 4, 7]
     },
     {
       "id": "2",
       "name": "Really Funny Movie",
       "genre": "comedy",
       "releaseDate": "2020-05-13T05:00:00.000Z",
-      "description": "Have a lot of grump in yourself because you can't forget to be grumpy and not be like king grumpy cat. Sleeps on my head hide when guests come over. Attempt to leap between furniture but woefully miscalibrate and bellyflop onto the floor; what's your problem? i meant to do that now i shall wash myself intently i'm bored inside, let me out i'm lonely outside, let me in i can't make up my mind whether to go in or out, guess i'll just stand partway in and partway out, contemplating the universe for half an hour how dare you nudge me with your foot?!?",
-      "movielocations": [6, 5, 11]
+      "description": "Have a lot of grump in yourself because you can't forget to be grumpy and not be like king grumpy cat. Sleeps on my head hide when guests come over. Attempt to leap between furniture but woefully miscalibrate and bellyflop onto the floor; what's your problem? i meant to do that now i shall wash myself intently i'm bored inside.",
+      "movieLocations": [6, 5, 11]
     },
     {
       "id": "3",
-      "name": "Really Drama Movie",
+      "name": "Really Dramatic Movie",
       "genre": "drama",
       "releaseDate": "2020-11-07T05:00:00.000Z",
-      "description": "Every single thing in the world has its own personality - and it is up to you to make friends with the little rascals. Just a little indication. You have to make those little noises or it won't work. I'm gonna start with a little Alizarin crimson and a touch of Prussian blue Don't be bashful drop me a line.",
-      "movielocations": [3, 10, 6, 12]
+      "description": "Every single thing in the world has its own personality - and it is up to you to make friends with the little rascals. Just a little indication. You have to make those little noises or it won't work. I'm gonna start with a little Alizarin crimson and a touch of Prussian blue Don't be bashful drop me a line. Enough with all the noise already, please make it stop.",
+      "movieLocations": [3, 10, 6, 12]
     }
   ]
 }
