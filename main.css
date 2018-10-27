@@ -9,13 +9,3 @@ body {
   background-color: orange !important;
   font-weight: bold;
 }
-
-.mov-card1 {
-  background-image: url(./img/Curtain-Hands.jpg);
-  background-size: 350px 415px;
-}
-
-.mov-card2 {
-  background-image: url(./img/Minions.jpg);
-  background-size: 350px 415px;
-}

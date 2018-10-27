@@ -5,7 +5,7 @@ const displayMovies = myMovies => {
   myMovies.forEach(movie => {
     let releaseDate = moment(movie.releaseDate).format("MMMM Do YYYY");
     newString += `
-    <div class="col-md-4 text-white">
+    <div class="col-md-4">
       <div class="mov-card${movie.id} card mb-4 shadow-sm">
         <h3 class="card-title text-center pt-2"><em>${movie.name}</em></h3>
         <div class="card-body">
@@ -18,10 +18,10 @@ const displayMovies = myMovies => {
             <h6><em>${releaseDate}</em></h6>
           </div>
           <div class="d-flex justify-content-between align-items-center">
-              <h6>Number of Locations:</h6>
-              <h6>${movie.movieLocations.length}</h6>
+            <h6>Number of Locations:</h6>
+            <h6>${movie.movieLocations.length}</h6>
           </div>
-          <hr class="border border-white">
+          <hr>
           <p class="card-text">${movie.description}</p>
         </div>
       </div>
