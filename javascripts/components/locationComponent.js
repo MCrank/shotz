@@ -7,7 +7,9 @@ const displayLocations = myLocations => {
       <div class="loc-card card col-md-3 px-0 mx-2 mb-3 text-white bg-dark shadow rounded" id="${
         location.id
       }">
-        <img class="card-img-top" src="${location.img}" alt="${location.name}">
+        <img class="card-img-top px-2 pt-2" src="${location.img}" alt="${
+      location.name
+    }">
           <div class="card-body">
             <h5 class="card-title"><em>${location.name}</em></h5>
             <p class="card-text m-0"><u>Address:</u></p>
