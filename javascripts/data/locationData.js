@@ -1,6 +1,6 @@
 const getLocationData = () => {
   return new Promise((resolve, reject) => {
-    $.get("../db/locations.json")
+    $.get('../db/locations.json')
       .done(locationData => {
         resolve(locationData.locations);
       })
@@ -10,4 +10,7 @@ const getLocationData = () => {
   });
 };
 
+const getLocationsByMovie = () => {
+  return new Promise((resolve, reject) => {});
+};
 export { getLocationData };

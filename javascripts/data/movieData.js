@@ -1,6 +1,6 @@
 const getMoviesData = () => {
   return new Promise((resolve, reject) => {
-    $.get("../db/movie.json")
+    $.get('../db/movie.json')
       .done(movieData => {
         resolve(movieData.movies);
       })
@@ -10,4 +10,19 @@ const getMoviesData = () => {
   });
 };
 
-export { getMoviesData };
+const getMoviesLocationsData = movieId => {
+  return new Promise((resolve, reject) => {
+    $.get('../db/movie.json')
+      .done(response => {
+        const selectedMovie = response.movies.filter(movie => {
+          return movie.id === movieId;
+        });
+        resolve(selectedMovie[0].movieLocations);
+      })
+      .fail(error => {
+        reject(error);
+      });
+  });
+};
+
+export { getMoviesData, getMoviesLocationsData };
