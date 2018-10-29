@@ -10,7 +10,23 @@ const getLocationData = () => {
   });
 };
 
-const getLocationsByMovie = () => {
-  return new Promise((resolve, reject) => {});
+const loadMovieLocations = movieLocationArr => {
+  return new Promise((resolve, reject) => {
+    $.get('../db/locations.json')
+      .done(locationData => {
+        let filteredMovLoc = [];
+        const myMovLoc = movieLocationArr.forEach(movieLoc => {
+          const filteredLoc = locationData.locations.filter(location => {
+            return parseInt(location.id) === movieLoc;
+          });
+          filteredMovLoc.push(filteredLoc[0]);
+        });
+        resolve(filteredMovLoc);
+      })
+      .fail(error => {
+        reject(error);
+      });
+  });
 };
-export { getLocationData };
+
+export { getLocationData, loadMovieLocations };

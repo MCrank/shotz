@@ -14,10 +14,11 @@ const getMoviesLocationsData = movieId => {
   return new Promise((resolve, reject) => {
     $.get('../db/movie.json')
       .done(response => {
-        const selectedMovie = response.movies.filter(movie => {
+        // Retunr the movieLocations array from the clicked movoe
+        const selectedMovie = response.movies.find(movie => {
           return movie.id === movieId;
-        });
-        resolve(selectedMovie[0].movieLocations);
+        }).movieLocations;
+        resolve(selectedMovie);
       })
       .fail(error => {
         reject(error);

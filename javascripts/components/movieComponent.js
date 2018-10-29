@@ -1,5 +1,7 @@
 import { getMoviesData, getMoviesLocationsData } from '../data/movieData.js';
+import { loadMovieLocations } from '../data/locationData.js';
 import { movieCardEvents } from '../events.js';
+import { displayLocations } from '../components/locationComponent.js';
 // import { movieCardLocFilter } from '../components/locationComponent.js';
 
 const displayMovies = myMovies => {
@@ -44,7 +46,19 @@ const movieSelectFilter = movieId => {
       $(movie).show();
     }
   });
-  getMoviesLocationsData(movieId);
+  // Okay now that we have hidden non clicked movies let's get
+  getMoviesLocationsData(movieId) // Returns the Array of Locations for this movie
+    .then(movieLocations => {
+      return loadMovieLocations(movieLocations);
+      //return movieLocFilter(movieLocations); //Hide all locations not a part of this movie
+    })
+    .then(filteredLocations => {
+      console.log('My single movie Locs: ', filteredLocations);
+      displayLocations(filteredLocations);
+    })
+    .catch(error => {
+      console.error(error);
+    });
 };
 
 // const getMovieLocationArray
@@ -54,6 +68,7 @@ const initMoviesCards = () => {
     .then(movies => {
       displayMovies(movies);
       // Wire up the Movie Card Click events
+      // TODO: Ask the instructors about this?  I thought with JQuery could use .on() to handl eit different
       movieCardEvents();
     })
     .catch(error => {

@@ -1,6 +1,7 @@
 import { getLocationData } from '../data/locationData.js';
 
 const displayLocations = myLocations => {
+  $('#location-cards').empty();
   let newString = '';
   myLocations.forEach(location => {
     newString += `
@@ -66,11 +67,15 @@ const userBtnFilter = evtTarget => {
   });
 };
 
-// const movieCardLocFilter = movieId => {
-//   getMoviesData().then(movies => {
-
-//   });
-// };
+const movieLocFilter = movieLocArray => {
+  $('.loc-card').each((i, card) => {
+    for (let i = 0; i < movieLocArray.length; i++) {
+      if ($.inArray(parseInt(card.id), movieLocArray) == -1) {
+        $(card).hide();
+      }
+    }
+  });
+};
 
 const initLocationCards = () => {
   getLocationData()
@@ -82,4 +87,4 @@ const initLocationCards = () => {
     });
 };
 
-export { initLocationCards, userInputFilter, userBtnFilter };
+export { initLocationCards, userInputFilter, userBtnFilter, displayLocations, movieLocFilter };
