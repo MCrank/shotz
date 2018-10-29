@@ -67,16 +67,6 @@ const userBtnFilter = evtTarget => {
   });
 };
 
-const movieLocFilter = movieLocArray => {
-  $('.loc-card').each((i, card) => {
-    for (let i = 0; i < movieLocArray.length; i++) {
-      if ($.inArray(parseInt(card.id), movieLocArray) == -1) {
-        $(card).hide();
-      }
-    }
-  });
-};
-
 const initLocationCards = () => {
   getLocationData()
     .then(locations => {
@@ -87,4 +77,4 @@ const initLocationCards = () => {
     });
 };
 
-export { initLocationCards, userInputFilter, userBtnFilter, displayLocations, movieLocFilter };
+export { initLocationCards, userInputFilter, userBtnFilter, displayLocations };

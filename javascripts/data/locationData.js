@@ -15,7 +15,7 @@ const loadMovieLocations = movieLocationArr => {
     $.get('../db/locations.json')
       .done(locationData => {
         let filteredMovLoc = [];
-        const myMovLoc = movieLocationArr.forEach(movieLoc => {
+        movieLocationArr.forEach(movieLoc => {
           const filteredLoc = locationData.locations.filter(location => {
             return parseInt(location.id) === movieLoc;
           });

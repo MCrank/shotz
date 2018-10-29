@@ -2,7 +2,6 @@ import { getMoviesData, getMoviesLocationsData } from '../data/movieData.js';
 import { loadMovieLocations } from '../data/locationData.js';
 import { movieCardEvents } from '../events.js';
 import { displayLocations } from '../components/locationComponent.js';
-// import { movieCardLocFilter } from '../components/locationComponent.js';
 
 const displayMovies = myMovies => {
   let newString = '';
@@ -37,7 +36,6 @@ const displayMovies = myMovies => {
 
 // When I click on a card only show the card that I clicked
 // Pass the MovieId to get the array of lcations
-// Filter the locations
 const movieSelectFilter = movieId => {
   $('.mov-card').each((index, movie) => {
     if (movie.id !== movieId) {
@@ -46,14 +44,13 @@ const movieSelectFilter = movieId => {
       $(movie).show();
     }
   });
-  // Okay now that we have hidden non clicked movies let's get
-  getMoviesLocationsData(movieId) // Returns the Array of Locations for this movie
+  getMoviesLocationsData(movieId) // Returns the Array of Locations from the Movie DB
     .then(movieLocations => {
+      // Returns a new array of locations filtered for the Movie that was clicked
       return loadMovieLocations(movieLocations);
-      //return movieLocFilter(movieLocations); //Hide all locations not a part of this movie
     })
     .then(filteredLocations => {
-      console.log('My single movie Locs: ', filteredLocations);
+      // Pass the new Locations Array to teh string locations String Builder
       displayLocations(filteredLocations);
     })
     .catch(error => {
@@ -61,14 +58,12 @@ const movieSelectFilter = movieId => {
     });
 };
 
-// const getMovieLocationArray
-
 const initMoviesCards = () => {
   getMoviesData()
     .then(movies => {
       displayMovies(movies);
       // Wire up the Movie Card Click events
-      // TODO: Ask the instructors about this?  I thought with JQuery could use .on() to handl eit different
+      // TODO: Ask the instructors about this?  I thought with JQuery could use .on() to handle it different
       movieCardEvents();
     })
     .catch(error => {
